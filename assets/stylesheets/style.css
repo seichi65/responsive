@@ -1,10 +1,23 @@
 @charset "UTF-8";
-/* ----------common style---------- */
-.c-image {
-  width: 100%;
-}
+/* 
+=======================================
+=======================================
+             common style
+=======================================
+=======================================
+*/
+/*----------layout----------*/
 .l-header {
   position: relative;
+}
+.l-footer {
+  text-align: center;
+  background-color: #fcd600;
+  padding: 100px 0 50px;
+}
+/*----------component----------*/
+.c-image {
+  width: 100%;
 }
 .c-mainTitle {
   position: absolute;
@@ -15,27 +28,21 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.p-aboutSection__title::after,
-.p-workSection__title::after,
-.p-blogSection__title::after {
-  display: block;
-  height: 2px;
-  width: 100px;
-  margin: 0 auto 100px;
-  background-color: #fcd600;
-  content: "";
-}
 .c-sectionTitle {
   font-size: 40px;
   text-align: center;
 }
-.c-sectionText {
-  margin: 50px auto;
-  font-size: 20px;
-  color: #888;
-  text-align: center;
+.c-copyright {
+  display: block;
+  font-size: 10px;
 }
-
+/*----------project----------*/
+/* header style */
+.p-headerLogo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 /* about style */
 .p-aboutSection {
   margin: 200px 0;
@@ -87,28 +94,69 @@
 .p-blogSection {
   margin: 200px auto;
 }
-.c-blogSection__moreLink {
+.p-blogSection__moreLink {
   display: block;
   background-color: #fcd600;
   color: #fff;
-  text-decoration: none;
   text-align: center;
 }
 .p-blogSection__listText {
   color: #888;
 }
+.p-aboutSection__textOuter,
+.p-workSection__textOuter,
+.p-blogSection__textOuter {
+  margin-bottom: 100px;
+}
+.p-aboutSection__textOuter::after,
+.p-workSection__textOuter::after,
+.p-blogSection__textOuter::after {
+  display: block;
+  height: 2px;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #fcd600;
+  content: "";
+}
+.p-aboutSection__text,
+.p-workSection__text,
+.p-blogSection__text {
+  margin: 50px auto;
+  font-size: 20px;
+  color: #888;
+  text-align: center;
+}
+/* footer style */
+.p-footerNav {
+  display: inline-flex;
+  margin-bottom: 50px;
+}
+.p-footerNav__item {
+  text-decoration: underline;
+}
+.p-footerNav__item:not(:last-of-type) {
+  margin-right: 30px;
+}
+/* 
+===========================================
+===========================================
+            common style  FIN
+===========================================
+===========================================
+*/
 
-/* ---------common style FIN--------- */
-
-/* ---------SP style--------- */
+/* 
+===========================================
+===========================================
+                SP style
+===========================================
+===========================================
+*/
 
 @media screen and (max-width: 768px) {
-  .p-aboutSection__inner,
-  .p-workSection__inner,
-  .p-blogSection__inner {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
+  /* header style */
+  .p-headerLogo {
+    width: 50px;
   }
   .p-headerNav__menuList {
     display: none;
@@ -122,14 +170,10 @@
     display: block;
     height: 5px;
     width: 50px;
-    margin-bottom: 10px;
     background-color: #fff;
   }
-  .p-headerNav__hamburgerItem:last-of-type {
-    margin-bottom: 0;
-  }
-  .c-header__logo {
-    display: none;
+  .p-headerNav__hamburgerItem:not(:last-of-type) {
+    margin-bottom: 10px;
   }
   .p-heroImage__outer {
     overflow: hidden;
@@ -160,30 +204,47 @@
     margin-bottom: 60px;
     font-size: 20px;
   }
-  .c-blogSection__moreLink {
+  .p-blogSection__item:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+  .p-blogSection__moreLink {
     margin: 0 auto 80px;
     padding: 20px 0;
     background-color: #fcd600;
     text-decoration: none;
   }
+  .p-blogSection__moreLink:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.p-aboutSection__inner,
+.p-workSection__inner,
+.p-blogSection__inner {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
 }
 
-/* ---------SP style FIN---------- */
+/* 
+=========================================
+=========================================
+             SP style  FIN
+========================================
+========================================
+*/
 
-/* ---------PC style--------- */
+/* 
+========================================
+========================================
+                PC style 
+========================================
+========================================
+*/
 
 @media screen and (min-width: 769px) {
-  .l-main {
-    width: 100%;
-  }
-  .c-header__logo {
-    position: absolute;
-    width: 50px;
-    top: 20px;
-    left: 20px;
-  }
-  .c-logo__image {
-    width: 100%;
+  /* header style */
+  .p-headerLogo {
+    width: 100px;
   }
   .p-headerNav__menuList {
     display: flex;
@@ -274,10 +335,15 @@
     margin: 30px 0 60px;
     font-size: 20px;
   }
-  .c-blogSection__moreLink {
+  .p-blogSection__moreLink {
     display: inline-block;
     padding: 20px 30px;
   }
 }
-
-/* ---------PC style FIN--------- */
+/* 
+=======================================
+=======================================
+             PC style FIN
+=======================================
+=======================================
+*/

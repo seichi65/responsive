@@ -10,8 +10,8 @@
   </head>
   <body>
     <header class="l-header">
-      <a href="#" class="c-header__logo">
-        <img src="./assets/images/logo.png" alt="ロゴ" class="c-image"/>
+      <a href="#" class="p-headerLogo">
+        <img src="./assets/images/logo.png" alt="会社ロゴ" class="c-image"/>
       </a>
       <nav class="p-headerNav">
         <ul class="p-headerNav__menuList">
@@ -42,9 +42,9 @@
     <main class="l-main">
       <section class="p-aboutSection">
         <div class="p-aboutSection__inner">
-          <div class="p-aboutSection__title">
+          <div class="p-aboutSection__textOuter">
             <h2 class="c-sectionTitle">ABOUT</h2>
-            <p class="c-sectionText">
+            <p class="p-aboutSection__text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
               est facilis maiores, perspiciatis
             </p>
@@ -59,9 +59,9 @@
       </section>
       <section class="p-workSection">
         <div class="p-workSection__inner">
-          <div class="p-workSection__title">
+          <div class="p-workSection__textOuter">
             <h2 class="c-sectionTitle">WORK</h2>
-            <p class="c-sectionText">
+            <p class="p-workSection__text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
               est facilis maiores, perspiciatis
             </p>
@@ -156,9 +156,9 @@
       </section>
       <section class="p-blogSection">
         <div class="p-blogSection__inner">
-          <div class="p-blogSection__title">
+          <div class="p-blogSection__textOuter">
             <h2 class="c-sectionTitle">BLOG</h2>
-            <p class="c-sectionText">
+            <p class="p-blogSection__text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
               est facilis maiores, perspiciatis
             </p>
@@ -176,9 +176,7 @@
                   Far far away, behind the word mountains, far from the
                   countries Vokalia and Consonantia
                 </p>
-                <div class="p-blogSection__more">
-                  <a href="#" class="c-blogSection__moreLink">MORE</a>
-                </div>
+                <a href="#" class="p-blogSection__moreLink">MORE</a>
               </div>
             </li>
             <li class="p-blogSection__item">
@@ -193,9 +191,7 @@
                   Far far away, behind the word mountains, far from the
                   countries Vokalia and Consonantia
                 </p>
-                <div class="p-blogSection__more">
-                  <a href="#" class="c-blogSection__moreLink">MORE</a>
-                </div>
+                <a href="#" class="p-blogSection__moreLink">MORE</a>
               </div>
             </li>
             <li class="p-blogSection__item">
@@ -210,14 +206,26 @@
                   Far far away, behind the word mountains, far from the
                   countries Vokalia and Consonantia
                 </p>
-                <div class="p-blogSection__more">
-                  <a href="#" class="c-blogSection__moreLink">MORE</a>
-                </div>
+                <a href="#" class="p-blogSection__moreLink">MORE</a>
               </div>
             </li>
           </ul>
         </div>
       </section>
     </main>
+    <footer class="l-footer">
+      <ul class="p-footerNav">
+        <li class="p-footerNav__item">
+          <a href="#">ABOUT</a>
+        </li>
+        <li class="p-footerNav__item">
+          <a href="#">WORK</a>
+        </li>
+        <li class="p-footerNav__item">
+          <a href="#">BlOG</a>
+        </li>
+      </ul>
+      <small class="c-copyright">&copy;2021 SEICHI SAKEMI</small>
+    </footer>
   </body>
 </html>
